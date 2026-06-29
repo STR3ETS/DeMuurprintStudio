@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MS Muurprint Studio — Direct op de muur. Jarenlang scherp.</title>
+    <title>MS Muurprint Studio -Direct op de muur. Jarenlang scherp.</title>
     <meta name="description" content="MS Muurprint Studio print afbeeldingen direct op uw muur met UV-LED technologie. Naadloos, duurzaam en exclusief. Geen behang, geen naden.">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -254,7 +254,7 @@
                     <p class="text-sm font-mono font-medium text-bronze uppercase tracking-wider mb-3">Onze diensten</p>
                     <h2 class="font-display font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">Wat we voor u kunnen doen</h2>
                 </div>
-                <p class="text-soft text-base sm:text-lg leading-relaxed max-w-md lg:text-right">Van woonkamer tot bedrijfspand — wij printen op elke muur, binnen of buiten.</p>
+                <p class="text-soft text-base sm:text-lg leading-relaxed max-w-md lg:text-right">Van woonkamer tot bedrijfspand -wij printen op elke muur, binnen of buiten.</p>
             </div>
 
             {{-- Grid --}}
@@ -311,7 +311,7 @@
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <h3 class="font-display font-semibold text-lg mb-2">Muurschilderingen</h3>
-                        <p class="text-soft text-sm leading-relaxed flex-1">Van kunstwerk tot illustratie — wij brengen elk ontwerp met fotorealistische kwaliteit op uw muur.</p>
+                        <p class="text-soft text-sm leading-relaxed flex-1">Van kunstwerk tot illustratie -wij brengen elk ontwerp met fotorealistische kwaliteit op uw muur.</p>
                         <a href="#" class="inline-flex items-center text-sm font-semibold text-bronze hover:text-bronze/80 transition-colors mt-4">
                             Meer info
                             <svg class="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
@@ -370,7 +370,7 @@
             <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
                 <p class="text-sm font-mono font-medium text-bronze uppercase tracking-wider mb-3">Werkwijze</p>
                 <h2 class="font-display font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">Van idee tot muurprint in 4 stappen</h2>
-                <p class="mt-4 text-soft text-base sm:text-lg leading-relaxed">Een helder en persoonlijk proces — zodat u precies weet wat u kunt verwachten.</p>
+                <p class="mt-4 text-soft text-base sm:text-lg leading-relaxed">Een helder en persoonlijk proces -zodat u precies weet wat u kunt verwachten.</p>
             </div>
 
             {{-- Steps --}}
@@ -450,7 +450,7 @@
                             </div>
                             <div>
                                 <h4 class="font-display font-semibold text-sm mb-1">Naadloos resultaat</h4>
-                                <p class="text-white/50 text-sm leading-relaxed">Direct op de muur geprint — geen randen, geen luchtbellen, geen verkleuringen bij naden.</p>
+                                <p class="text-white/50 text-sm leading-relaxed">Direct op de muur geprint -geen randen, geen luchtbellen, geen verkleuringen bij naden.</p>
                             </div>
                         </div>
 
@@ -480,7 +480,7 @@
                             </div>
                             <div>
                                 <h4 class="font-display font-semibold text-sm mb-1">Elk beeld mogelijk</h4>
-                                <p class="text-white/50 text-sm leading-relaxed">Foto's, logo's, patronen, illustraties — alles in fotorealistische kwaliteit tot 1440 dpi.</p>
+                                <p class="text-white/50 text-sm leading-relaxed">Foto's, logo's, patronen, illustraties -alles in fotorealistische kwaliteit tot 1440 dpi.</p>
                             </div>
                         </div>
                     </div>
@@ -501,7 +501,7 @@
                 {{-- Rechterkolom: beeld --}}
                 <div class="relative">
                     <div class="rounded-2xl overflow-hidden">
-                        <img src="{{ asset('scenarios/22.png') }}" alt="Muurprint resultaat — scherpe details op de muur" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="{{ asset('scenarios/22.png') }}" alt="Muurprint resultaat -scherpe details op de muur" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                     {{-- Stats overlay --}}
                     <div class="absolute -bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 shadow-lg border border-line">
@@ -749,7 +749,7 @@
                 {{-- Rechterkolom: foto --}}
                 <div class="relative hidden lg:block lg:sticky lg:top-24">
                     <div class="rounded-2xl overflow-hidden shadow-md border border-line">
-                        <img src="{{ asset('scenarios/10.png') }}" alt="Printrobot in actie — naadloze muurprint in een woonkamer" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="{{ asset('scenarios/10.png') }}" alt="Printrobot in actie -naadloze muurprint in een woonkamer" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -792,7 +792,7 @@
                         <img src="logo.png" alt="MS Muurprint Studio" class="max-h-10 brightness-0 invert">
                     </a>
                     <p class="text-white/50 text-sm leading-relaxed max-w-xs">
-                        Wij printen foto's, logo's en designs direct op uw muur met UV-LED technologie. Geen behang, geen naden — jarenlang scherp.
+                        Wij printen foto's, logo's en designs direct op uw muur met UV-LED technologie. Geen behang, geen naden -jarenlang scherp.
                     </p>
                     {{-- Social media --}}
                     <div class="flex items-center gap-2.5 mt-6">
