@@ -1,0 +1,212 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    /* Fonts — Brandbook */
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    /* Inkt — primair (CMYK) */
+    --color-cyan: #0B96C9;
+    --color-magenta: #DD046C;
+    --color-yellow: #F9C636;
+    --color-ink: #27282A;
+
+    /* Accent — techniek */
+    --color-bronze: #D4B379;
+
+    /* Neutralen — de muur */
+    --color-canvas: #F7F6F3;
+    --color-line: #E7E5E0;
+    --color-muted: #9A9893;
+    --color-soft: #6B6A66;
+
+    /* Semantisch */
+    --color-primary: #D4B379;
+    --color-secondary: #0B96C9;
+
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* Schaduwen */
+    --shadow-sm: 0 1px 2px rgba(39, 40, 42, 0.06);
+    --shadow-md: 0 6px 20px rgba(39, 40, 42, 0.08);
+}
+
+/* ===== Hero onload animaties ===== */
+@keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes hero-slide-down {
+    from { opacity: 0; transform: translateY(-100%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-animate {
+    opacity: 0;
+    animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-animate-fade {
+    opacity: 0;
+    animation: hero-fade-in 0.6s ease forwards;
+}
+
+.hero-nav-animate {
+    opacity: 0;
+    animation: hero-slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.85s forwards;
+}
+
+/* Staggered delays */
+.hero-delay-1 { animation-delay: 0.1s; }
+.hero-delay-2 { animation-delay: 0.25s; }
+.hero-delay-3 { animation-delay: 0.4s; }
+.hero-delay-4 { animation-delay: 0.55s; }
+.hero-delay-5 { animation-delay: 0.7s; }
+
+/* SVG stroke-draw */
+.hero-stroke {
+    stroke-dasharray: var(--stroke-len);
+    stroke-dashoffset: var(--stroke-len);
+    transition: none;
+}
+
+.hero-stroke.is-drawn {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-stroke-delay-1.is-drawn { transition-delay: 0s; }
+.hero-stroke-delay-2.is-drawn { transition-delay: 0.4s; }
+.hero-stroke-delay-3.is-drawn { transition-delay: 0.8s; }
+
+/* ===== FAQ details uitklap-animatie ===== */
+details .faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+}
+
+details .faq-content.is-active {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+details .faq-content > div {
+    overflow: hidden;
+}
+
+/* Summary marker verbergen */
+details summary {
+    list-style: none;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* SVG icoon rotatie — via JS-class, niet via [open] */
+details summary svg {
+    transition: transform 0.3s ease;
+}
+details.is-open summary svg {
+    transform: rotate(45deg);
+}
+
+/* Shadow op open detail */
+details.is-open {
+    box-shadow: 0 6px 20px rgba(39, 40, 42, 0.08);
+}
+
+/* ===== Mega menu dropdown ===== */
+.nav-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Chevron rotatie bij hover */
+.nav-item:hover .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.nav-chevron {
+    transition: transform 0.2s ease;
+}
+
+/* ===== Fullscreen mobile menu ===== */
+#mobile-menu {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+#mobile-menu.is-open {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+#mobile-menu .mobile-menu-backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#mobile-menu.is-open .mobile-menu-backdrop {
+    opacity: 1;
+}
+
+#mobile-menu .mobile-menu-panel {
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu.is-open .mobile-menu-panel {
+    transform: translateX(0);
+}
+
+/* ===== Navbar scroll-verkleining ===== */
+nav {
+    transition: box-shadow 0.3s ease;
+}
+
+/* ===== WhatsApp chat widget ===== */
+.wa-chat-window {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.wa-chat-window.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.wa-btn-pulse {
+    animation: wa-pulse 2s infinite;
+}
+
+@keyframes wa-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(39, 40, 42, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(39, 40, 42, 0); }
+}
